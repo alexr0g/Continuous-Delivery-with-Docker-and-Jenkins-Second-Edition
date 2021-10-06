@@ -27,7 +27,7 @@ podTemplate(containers: [
                         '''
 
                         publishHTML (target: [
-                            reportDir: '/var/jenkins_home/jobs/Continuous-Delivery-with-Docker-and-Jenkins-Second-Edition/branches/master/htmlreports/JaCoCo_20Report',
+                            reportDir: '/var/jenkins_home/jobs/Continuous-Delivery-with-Docker-and-Jenkins-Second-Edition/branches/master/htmlreports/JaCoCoReport',
                             reportFiles: 'index.html',
                             reportName: "JaCoCoReport"
                         ]) 
