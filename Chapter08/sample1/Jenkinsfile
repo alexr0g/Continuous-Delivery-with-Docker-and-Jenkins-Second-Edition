@@ -27,9 +27,9 @@ podTemplate(containers: [
                         '''
 
                         publishHTML (target: [
-                            reportDir: '/var/jenkins_home/jobs/Continuous-Delivery-with-Docker-and-Jenkins-Second-Edition/branches/master/htmlreports/JaCoCoReport',
+                            reportDir: 'Chapter08/sample1/build/reports/jacoco/test/html',
                             reportFiles: 'index.html',
-                            reportName: "JaCoCoReport"
+                            reportName: "JaCoCo Report"
                         ]) 
                     }
                 }
