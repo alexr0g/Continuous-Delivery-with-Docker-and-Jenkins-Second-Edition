@@ -10,6 +10,8 @@ podTemplate(containers: [
             stage('Run pipeline against a gradle project') {
                 git 'https://github.com/alexr0g/Continuous-Delivery-with-Docker-and-Jenkins-Second-Edition.git'
                 container('gradle') {
+                    
+                    /*
                     stage('Build a gradle project') {
                         sh '''
                         cd Chapter08/sample1
@@ -32,6 +34,7 @@ podTemplate(containers: [
                             reportName: "JaCoCo Report"
                         ]) 
                     }
+                    */
                     
                     stage("Code style") {
                         try {
