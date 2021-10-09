@@ -32,6 +32,25 @@ podTemplate(containers: [
                             reportName: "JaCoCo Report"
                         ]) 
                     }
+                    
+                    stage("Code style") {
+                        try {
+                              sh '''
+                              pwd
+                              cd Chapter08/sample1
+                              ./gradlew checkstyleMain
+                              '''
+                        } 
+                        catch (error) {
+                          echo "Checkstyle failed"
+                        }
+                        
+                    publishHTML (target: [
+                      reportDir: 'Chapter08/sample1/build/reports/checkstyle/test/html',
+                      reportFiles: 'index.html',
+                      reportName: "Checkstyle Report"
+                    ])
+                    }       
                 }
             }      
         }
